@@ -37,10 +37,10 @@ btnReset.addEventListener('click', () => {
     writer.value = "";
     var temp = writer.value;
     if (temp != myNotes) {
-        console.log('myNotes save: ', temp);
+        console.log('myNotes стерто!');
         myNotes = temp;
         localStorage.setItem('myNotes', myNotes);    
     } else {
-        console.log('спрацював клік стерти');
+        console.log('вже стерто!');
     }
 });
