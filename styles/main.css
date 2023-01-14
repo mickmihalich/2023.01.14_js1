@@ -1,0 +1,36 @@
+.form_writer {
+  display: flex;
+  padding: 3em;
+}
+
+.writer {
+  width: 80%;
+  height: 10em;
+  padding: 0.5em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0 1em;
+}
+
+.save {
+  height: 3em;
+  width: 5em;
+  border: 1px solid orange;
+  color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.header {
+  padding: 0 1em;
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -2.9em;
+}/*# sourceMappingURL=main.css.map */
