@@ -16,15 +16,26 @@
   gap: 1em;
   padding: 0 1em;
 }
-
-.save {
+.buttons .save {
   height: 3em;
   width: 5em;
-  border: 1px solid orange;
-  color: orange;
+  border-width: 1px;
+  border-style: solid;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.buttons .save.wait {
+  border-color: orange;
+  color: orange;
+}
+.buttons .save.warning {
+  border-color: red;
+  color: red;
+}
+.buttons .save.good {
+  border-color: green;
+  color: green;
 }
 
 h1.header {

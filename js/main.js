@@ -12,9 +12,21 @@ console.log('myNotes: ', myNotes);
 writer.value = myNotes;
 
 writer.addEventListener('input', () => {
-    saver.style.borderColor = "red";
-    saver.style.color = "red";
-    saver.innerText = "Змінено";
+    if(saver.classList.contains('wait')){
+        saver.classList.remove('wait');
+    }    
+    if(saver.classList.contains('good')){
+        saver.classList.remove('good');
+    }
+    if(!saver.classList.contains('warning')){        
+        saver.classList.add('warning');
+        
+        console.log('add(warning)');        
+        
+        saver.innerText = "Змінено";
+    }  
+    
+    
 });
 
 const saver = document.querySelector(".save");
@@ -23,13 +35,20 @@ saver.addEventListener('mouseenter', () => {
     if (temp != myNotes) {
         console.log('myNotes save: ', temp);
         myNotes = temp;
-        localStorage.setItem('myNotes', myNotes);    
+        localStorage.setItem('myNotes', myNotes);   
+     
+        if(saver.classList.contains('warning')){
+            saver.classList.remove('warning');
+        }
+        if(!saver.classList.contains('good')){
+            saver.classList.add('good');
+        }
+
+        saver.innerText = "Збережено";  
     } else {
         console.log('нічого не змінилося');
-    }
-    saver.style.borderColor = "green";
-    saver.style.color = "green";
-    saver.innerText = "Збережено";    
+    }    
+      
 });
 
 const btnReset = document.querySelector(".reset");
